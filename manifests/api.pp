@@ -21,7 +21,7 @@ class microcosm::api {
 		owner   => root,
 		group   => root,
 		mode    => '0644',
-		content => template('puppet-microcosm/etc/microcosm/api.conf.erb'),
+		content => template('microcosm/etc/microcosm/api.conf.erb'),
 		require => File['/etc/microcosm'],
 	}
 
@@ -30,7 +30,7 @@ class microcosm::api {
 		owner   => root,
 		group   => root,
 		mode    => '0755',
-		source  => 'puppet:///modules/puppet-microcosm/etc/init/microcosm.conf',
+		source  => 'puppet:///modules/microcosm/etc/init/microcosm.conf',
 		require => File['/etc/microcosm/api.conf'],
 	}
 
