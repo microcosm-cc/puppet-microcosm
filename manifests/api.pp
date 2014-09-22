@@ -1,4 +1,4 @@
-class project_microcosm::api {
+class microcosm::api {
 
     user { 'microcosm':
         ensure     => 'present',
