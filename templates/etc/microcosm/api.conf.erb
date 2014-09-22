@@ -1,0 +1,31 @@
+[api]
+
+listen_port=<%= @microcosm_backend_port %>
+microcosm_domain=<%= @microcosm_domain %>
+
+database_host=<%= @postgres_backend_private_ip %>
+database_port=<%= @postgres_port %>
+database_database=<%= @postgres_database %>
+database_username=<%= @postgres_username %>
+database_password=<%= @postgres_password %>
+
+memcached_host=<%= @memcached_api_backend_private_ip %>
+memcached_port=<%= @memcached_api_backend_port %>
+
+aws_access_key_id=<%= @aws_access_key_id %>
+aws_secret_access_key=<%= @aws_secret_access_key %>
+s3_bucket=<%= @s3_bucket %>
+
+mailgun_api_key=<%= @mailgun_api_key %>
+mailgun_api_url=<%= @mailgun_api_url %>
+
+error_log_filename=/var/log/microcosm/error.log
+warn_log_filename=/var/log/microcosm/warn.log
+debug_log_filename=/var/log/microcosm/debug.log
+
+elasticsearch_host=<%= @elasticsearch_private_ip %>
+elasticsearch_port=<%= @elasticsearch_host %>
+
+persona_verifier_url=<%= @persona_verifier_url %>
+
+environment=<%= @microcosm_environment %>
