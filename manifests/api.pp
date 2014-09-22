@@ -21,7 +21,7 @@ class microcosm::api {
 		owner   => root,
 		group   => root,
 		mode    => '0644',
-		content => template('project_microcosm/etc/microcosm/api.conf.erb'),
+		content => template('puppet-microcosm/etc/microcosm/api.conf.erb'),
 		require => File['/etc/microcosm'],
 	}
 
@@ -30,14 +30,14 @@ class microcosm::api {
 		owner   => root,
 		group   => root,
 		mode    => '0755',
-		source  => 'puppet:///modules/project_microcosm/etc/init/microcosm.conf',
+		source  => 'puppet:///modules/puppet-microcosm/etc/init/microcosm.conf',
 		require => File['/etc/microcosm/api.conf'],
 	}
 
 	service { 'microcosm':
 		ensure   => running,
 		provider => 'upstart',
-		require  => [File['/etc/init/microcosm.conf'],File['/var/log/microcosm'],File['/usr/sbin/microcosm']],
+		require  => [File['/etc/init/microcosm.conf'], File['/var/log/microcosm'], ],
 	}
 
 	# Logs
