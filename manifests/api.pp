@@ -1,5 +1,7 @@
 class microcosm::api {
 
+    class {'memcached': }
+
     user { 'microcosm':
         ensure     => 'present',
         comment    => 'microcosm service account',
