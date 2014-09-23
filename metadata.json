@@ -1,0 +1,20 @@
+{
+  "name": "microcosm-puppet",
+  "version": "0.0.1",
+  "author": "Matt Cottingham",
+  "license": "Apache 2.0",
+  "summary": "Module for setting up a Microcosm forum",
+  "source": "https://github.com/microcosm-cc/microcosm-puppet",
+  "project_page": "",
+  "issues_url": "",
+  "tags": [],
+  "operatingsystem_support": [
+    {
+    "operatingsystem": "Ubuntu",
+    "operatingsystemrelease": [ "14.04" ]
+    }
+   ]
+  "dependencies": [
+    { "name": "jfryman/nginx", "version_requirement": ">=0.0.10" }
+  ]
+}
