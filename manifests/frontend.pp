@@ -31,14 +31,6 @@ class microcosm::frontend {
     }
 
     # General directory structure and nginx config
-    file { '/etc/nginx/conf.d/default.conf':
-        ensure  => absent,
-    }
-
-    file { '/etc/nginx/conf.d/example_ssl.conf':
-        ensure  => absent,
-    }
-
     file { '/srv/www':
         ensure  => directory,
         owner   => root,
