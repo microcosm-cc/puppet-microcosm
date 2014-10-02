@@ -102,7 +102,7 @@ class microcosm::frontend {
 		owner   => root,
 		group   => root,
 		mode    => '0755',
-		source  => 'puppet:///modules/project_microcosm/etc/init/microweb.conf',
+		source  => 'puppet:///modules/microcosm/etc/init/microweb.conf',
 	}
 
 	file { '/var/log/django/microweb.log':
