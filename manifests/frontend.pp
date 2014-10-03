@@ -68,7 +68,7 @@ class microcosm::frontend {
     }
 
     # Upstream server (gunicorn) listens on port 8000 on the loopback device
-	nginx::resource::upstream { 'upstream':
+	nginx::resource::upstream { 'microweb-upstream':
 		ensure  => present,
 		members => ["127.0.0.1:8000"],
 	}
